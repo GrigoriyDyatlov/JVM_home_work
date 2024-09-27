@@ -1,0 +1,15 @@
+public class JvmComprehension { загрузка классов в метаспайс.
+
+    public static void main(String[] args) { создание фрейма в стеке
+        int i = 1;                      // 1 создание переменной в стеке
+        Object o = new Object();        // 2 создание объекта в куче и ссылки в стеке
+        Integer ii = 2;                 // 3 создание объекта в куче и ссылки в стеке
+        printAll(o, i, ii);             // 4 создание нового фрейма в стеке и переменных или ссылок закрытие фрейиа по завершении
+        System.out.println("finished"); // 7 создание нового фрейма, объекта в куче и ссылки на него
+    } разбор стека (закрытие фремов)
+
+    private static void printAll(Object o, int i, Integer ii) {
+        Integer uselessVar = 700;                   // 5создание объекта в куче и ссылки во фреме.
+        System.out.println(o.toString() + i + ii);  // 6 создание объекта в куче выполнение методов и по завершение закрытие фрема.
+    } закрытие фрема
+}
